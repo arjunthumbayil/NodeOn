@@ -12,6 +12,11 @@ app.post('/user', (req, res) => {
   res.send('Data saved to DB successfully!');
 });
 
+app.delete('/user', (req, res) => {
+  console.log('Delete data from DB.');
+  res.send('Data deleted from DB successfully!');
+});
+
 // this will match all the HTTP method API calls to /test
 app.use('/test', (req, res) => {
   res.send('Hello from the server, yeah right!');
