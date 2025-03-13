@@ -2,16 +2,21 @@ const express = require('express');
 
 const app = express();
 
-const { adminAuth, userAuth } = require('./middlewares/auth');
-
-app.use('/admin', adminAuth);
-
-app.post('/user/login', (req, res) => {
-  res.send('Use logged in successfully!');
+app.get('/getUserData', (req, res) => {
+  try {
+    //Logic of DB call and getting usedata
+    throw new Error('asfkj');
+    res.send('Use logged in successfully!');
+  } catch (err) {
+    res.status(500).send('Error: Contact Support Team');
+  }
 });
 
-app.use('/user', userAuth, (req, res) => {
-  res.send('User data sent after check!');
+app.use('/', (err, req, res, next) => {
+  if (err) {
+    //log your error
+    res.status(500).send('Something went wrong');
+  }
 });
 
 app.listen(7777, () => {
