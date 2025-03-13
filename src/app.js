@@ -4,9 +4,10 @@ const app = express();
 
 app.use(
   '/user',
-  (req, res) => {
+  (req, res, next) => {
     console.log('Handling the route user1');
-    res.send('Response!');
+    //res.send('Response!');
+    next();
   },
   (req, res) => {
     console.log('Handling the route user2');
