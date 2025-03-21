@@ -41,3 +41,4 @@
 
 - Create POST signup/ API to add data to database
 - Push some documents using API calls From Postman
+- Error handling using try catch
