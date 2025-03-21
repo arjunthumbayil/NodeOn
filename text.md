@@ -32,3 +32,9 @@
 - Write a dummy middleware for admin
 - Write a dummy middleware for all user routes, except /user/login
 - Error handling using app.use('/', (err, req, res, next) => {});
+
+- Create a cluster on MongoDb Official Website(Mongo Atlas)
+- Install Mongoose library
+- Connect Application to Database(not Cluster)
+- Call the connectDB function and connect to database before starting application on 7777
+- Create a User Schema & User Model
