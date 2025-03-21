@@ -38,3 +38,6 @@
 - Connect Application to Database(not Cluster)
 - Call the connectDB function and connect to database before starting application on 7777
 - Create a User Schema & User Model
+
+- Create POST signup/ API to add data to database
+- Push some documents using API calls From Postman
