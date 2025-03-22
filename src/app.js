@@ -4,7 +4,8 @@ const app = express();
 
 const User = require('./models/user');
 
-//Middleware from Express - for converting req.body into readable json object. Works throughout cos of 'app.use'
+//Middleware from Express - for converting req.body into readable json object.
+//Works throughout cos of 'app.use'
 app.use(express.json());
 
 //Get user by emailId
@@ -16,6 +17,16 @@ app.get('/user', async (req, res) => {
     res.send(user);
   } catch (error) {
     res.satus(400).send('Error: ', error.message);
+  }
+});
+
+//Feed API - Get all the users from database
+app.get('/feed', async (req, res) => {
+  try {
+    const users = await User.find({});
+    res.send(users);
+  } catch (error) {
+    res.status(400).send('Error: ', error.message);
   }
 });
 
