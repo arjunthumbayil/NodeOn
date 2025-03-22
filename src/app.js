@@ -44,6 +44,18 @@ app.post('/signup', async (req, res) => {
   }
 });
 
+//user API - DELETE a user object from database
+
+app.delete('/user', async (req, res) => {
+  const userId = req.body.userId;
+  try {
+    const user = await User.findByIdAndDelete(userId);
+    res.send('User deleted successfully!');
+  } catch (error) {
+    res.satus(400).send('Error: ', error.message);
+  }
+});
+
 connectDB()
   .then(() => {
     console.log('Database connection established...');
