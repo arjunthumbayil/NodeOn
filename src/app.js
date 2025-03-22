@@ -8,7 +8,7 @@ const User = require('./models/user');
 //Works throughout cos of 'app.use'
 app.use(express.json());
 
-//Get user by emailId
+//user API - GET user by emailId
 app.get('/user', async (req, res) => {
   const userEmail = req.body.emailId;
 
@@ -20,7 +20,7 @@ app.get('/user', async (req, res) => {
   }
 });
 
-//Feed API - Get all the users from database
+//feed API - GET all the users from database
 app.get('/feed', async (req, res) => {
   try {
     const users = await User.find({});
@@ -29,7 +29,7 @@ app.get('/feed', async (req, res) => {
     res.status(400).send('Error: ', error.message);
   }
 });
-
+//signup API - POST a user object to database
 app.post('/signup', async (req, res) => {
   //req object saved in a variable
   const userObj = req.body;
