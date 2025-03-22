@@ -51,3 +51,8 @@
 
 - A DELETE /user API added
 - Find difference between PATCH & PUT?
+
+- API PATCH - Update a user added
+- Explore the Mongoose Documentation on API Model Methods further?
+- What are options in a Model.findOneAndUpdate method, explore more?
+- API PATCH - Update a user added with emailId?
