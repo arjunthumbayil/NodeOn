@@ -4,13 +4,12 @@ const app = express();
 
 const User = require('./models/user');
 
+//Middleware from Express - for converting req.body into readable json object. Works throughout cos of 'app.use'
+app.use(express.json());
+
 app.post('/signup', async (req, res) => {
-  const userObj = {
-    firstName: 'Sachin',
-    lastName: 'Tendulkar',
-    emailId: 'sacten@gmail.com',
-    password: 'sacte@123',
-  };
+  //req object saved in a variable
+  const userObj = req.body;
   //Creating a new instance of the User Model
   const user = new User(userObj);
 
