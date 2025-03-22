@@ -7,6 +7,18 @@ const User = require('./models/user');
 //Middleware from Express - for converting req.body into readable json object. Works throughout cos of 'app.use'
 app.use(express.json());
 
+//Get user by emailId
+app.get('/user', async (req, res) => {
+  const userEmail = req.body.emailId;
+
+  try {
+    const user = await User.find({ emailId: userEmail });
+    res.send(user);
+  } catch (error) {
+    res.satus(400).send('Error: ', error.message);
+  }
+});
+
 app.post('/signup', async (req, res) => {
   //req object saved in a variable
   const userObj = req.body;
