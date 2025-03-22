@@ -45,7 +45,6 @@ app.post('/signup', async (req, res) => {
 });
 
 //user API - DELETE a user object from database
-
 app.delete('/user', async (req, res) => {
   const userId = req.body.userId;
   try {

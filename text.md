@@ -48,3 +48,5 @@
 - Make /signup API dynamic to receive data from Postman/Client
 - Multiple mongo documents to one on Model.findone - on what basis does it get that one document?
 - API - /user /feed added
+
+- A DELETE /user API added
