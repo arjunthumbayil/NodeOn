@@ -55,6 +55,18 @@ app.delete('/user', async (req, res) => {
   }
 });
 
+//user API - PATCH (update) a user object from database
+app.patch('/user', async (req, res) => {
+  const userId = req.body.userId;
+  const data = req.body;
+  try {
+    await User.findByIdAndUpdate({ _id: userId }, data);
+    res.send('User updated successfully!');
+  } catch (error) {
+    res.satus(400).send('Error: ', error.message);
+  }
+});
+
 connectDB()
   .then(() => {
     console.log('Database connection established...');

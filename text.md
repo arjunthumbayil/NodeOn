@@ -50,3 +50,4 @@
 - API - /user /feed added
 
 - A DELETE /user API added
+- Find difference between PATCH & PUT?
