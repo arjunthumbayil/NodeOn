@@ -66,3 +66,5 @@
 
 - Add API level validation on Patch request & Signup POST API
 - Data Sanitizing - Add API validations for each fiedls in schema.
+- Install Validator from NPM
+- Explore validator library function and use validator functions for password, email
