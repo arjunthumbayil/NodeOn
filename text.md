@@ -63,3 +63,6 @@
 - Create a custom Validator function for gender
 - Improve the DB schema - PUT all appropriate validations on each field in Schema
 - Add timestamps to the schema
+
+- Add API level validation on Patch request & Signup POST API
+- Data Sanitizing - Add API validations for each fiedls in schema.
