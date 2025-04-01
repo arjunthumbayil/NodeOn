@@ -31,6 +31,10 @@ app.get('/feed', async (req, res) => {
 });
 //signup API - POST a user object to database
 app.post('/signup', async (req, res) => {
+  // 1 Validaion of Data
+  // 2 Encrypt the Password
+  // 3 Store into the DB
+
   //req object saved in a variable
   const userObj = req.body;
   //Creating a new instance of the User Model
